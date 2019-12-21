@@ -1,4 +1,4 @@
-# Sudoku_Solver_Generator and Shoot Sudoku with Camera
+# Sudoku_Solver_Generator and Shoot with Camera
  Sudoku analysis and generation C# program. 
  The only algorithm used is non-backtracking.
  The algorithm used is 
