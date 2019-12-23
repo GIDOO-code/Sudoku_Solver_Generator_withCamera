@@ -62,8 +62,8 @@ namespace GNPZ_sdk{
             var selP=rdbVideoCameraLst.Find(p=>(bool)p.IsChecked);
             camID = int.Parse((string)selP.Content);
             stringCapType = (string)captureType.SelectedValue;
-            FlipModeX = (bool)chbXaxis.IsChecked;
-            FlipModeY = (bool)chbXaxis.IsChecked;
+          //FlipModeX = (bool)chbXaxis.IsChecked;
+          //FlipModeY = (bool)chbYaxis.IsChecked;
 
             ThreadPool.QueueUserWorkItem(this.cameraCapture);
             cameraCancel=false;
@@ -92,7 +92,12 @@ namespace GNPZ_sdk{
                         if(cameraCancel)  return;
                         camera.Read(img); 
                         if(img.Empty()){ Thread.Sleep(100); goto nextTry;}
-                                    
+
+                        this.Dispatcher.Invoke(() => {
+                                FlipModeX = (bool)chbXaxis.IsChecked;
+                                FlipModeY = (bool)chbYaxis.IsChecked;
+                        });
+
                         Frame00 = img;
                         if(FlipModeX) Frame00 = Frame00.Flip(FlipMode.X);
                         if(FlipModeY) Frame00 = Frame00.Flip(FlipMode.Y);
