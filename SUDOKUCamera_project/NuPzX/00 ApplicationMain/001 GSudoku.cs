@@ -212,7 +212,7 @@ namespace GNPZ_sdk{
                             }
                             else if(nc>=3){ difLvl=1; name=eLst[2]; }
 
-                            string st = eLst[0].Replace(".", "0").Replace(" ", "");
+                            string st = eLst[0].Replace(".", "0").Replace("-", "0").Replace(" ", "");
                             List<UCell> BDLa=_stringToBDL(st);
                             int ID=SDKProbLst.Count; 
 
@@ -277,7 +277,7 @@ namespace GNPZ_sdk{
         }   
 
         public List<UCell> _stringToBDL( string stOrg ){
-            string st = stOrg.Replace(".", "0").Replace(" ", "");
+            string st = stOrg.Replace(".", "0").Replace("-", "0").Replace(" ", "");
             try{               
                 List<UCell> B = new List<UCell>();
                 int rc=0;
