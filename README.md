@@ -13,3 +13,4 @@ There are also functions for transposed transformation of Sudoku problems, stand
 The algorithm is explained on the HTML page(https://github.com/GIDOO-code/Sudoku_Solver_Generator/tree/master/docs). 
 
 # This version can shoot sudoku with webcam
+Two files are required for execution. These are in the "SUDOKUCamera_App" folder.
