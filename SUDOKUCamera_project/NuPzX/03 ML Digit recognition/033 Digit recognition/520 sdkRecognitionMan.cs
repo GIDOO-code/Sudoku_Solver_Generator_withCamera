@@ -30,7 +30,7 @@ namespace GIDOOCV{
         public sdkFrameRecgV3Man(  NuPz_Win pGNP00, string fName, int MLtype=6, int MidLSize=64, double gammaC=0.7 ){
             pGNP00win = pGNP00;
             this.fName=fName;
-            Send_DigitsRecog += new SDKEventHandler(pGNP00win.DigitsRecogReport);  
+            Send_DigitsRecog += new SDKEventHandler(pGNP00win.DigitsRecogReport);
 
             if(sdkFRec==null)  sdkFRec=new sdkFrameRecgV3(fName:fName);
             SDK64=Enumerable.Repeat(0xFFFFFFFF,81).ToArray();   
@@ -51,7 +51,8 @@ namespace GIDOOCV{
         }
 
         private bool DigitRecog(out int[] SDK8, bool dispB=false){
-            pFrame00  = pGNP00win.Frame00;
+            pFrame00  = NuPz_Win.Frame00; 
+          //pFrame00  = pGNP00win.Frame00;
             if(pFrame00.Height<2){ SDK8=null; return false; }
 
             Mat _frame = pFrame00.CvtColor(ColorConversionCodes.BGR2GRAY);

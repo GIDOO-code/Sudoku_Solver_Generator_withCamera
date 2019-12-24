@@ -20,7 +20,7 @@ using MathNet.Numerics.LinearAlgebra.Double;
     //http://qiita.com/skitaoka/items/e6afbe238cd69c899b2a
 namespace GIDOOCV{
     //機械学習(N層パーセプトロン) 
-    
+
     #region MLUnit3
     public class MLUnit3{
         static  public  int     ID0;

@@ -6,6 +6,7 @@ using System.Text;
 using System.Collections;
 
 namespace GIDOOCV{
+
     public class UEval{
         public string      name;
         public int         type; //0,1,2,3,4 
@@ -366,4 +367,5 @@ namespace GIDOOCV{
             }
         }
     }
+
 }

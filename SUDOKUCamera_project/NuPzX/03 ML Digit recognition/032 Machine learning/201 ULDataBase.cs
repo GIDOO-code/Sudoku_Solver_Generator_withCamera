@@ -12,6 +12,7 @@ using MathNet.Numerics.LinearAlgebra.Double;
 using OpenCvSharp;
 
 namespace GIDOOCV{
+
     public partial class ULDataBase{
         static private double IniVal=0.0;
         static private int  _pSize=-1;
@@ -407,4 +408,5 @@ namespace GIDOOCV{
         }
       #endregion Evaluation value file IO
     }
+
 }

@@ -24,17 +24,23 @@ namespace GNPZ_sdk{
                 WriteLine(e.StackTrace);
             }
 	    }
-        public SDKEventArgs( int[] SDK81 ){
-            this.SDK81=SDK81;
+        public SDKEventArgs( int[] SDK81){
+            this.SDK81    = SDK81;
         }
     }
 
-    public class SDKSolutionEventArgs: EventArgs{
-        public UProbS    UPB;
+    public class SDKSolutionEventArgs: SDKEventArgs{
+
+        public UProbS   UPB;
         public UPuzzle  GPX;
-	    public SDKSolutionEventArgs( UPuzzle  GPX ){
+        public bool     succeedB;
+	    public SDKSolutionEventArgs( UPuzzle GPX ){
             this.UPB = new UProbS(GPX);
             this.GPX = GPX;
 	    }
+        public SDKSolutionEventArgs( int[] SDK81, bool succeedB){
+            this.SDK81    = SDK81;
+            this.succeedB = succeedB;
+        }
     }
 }

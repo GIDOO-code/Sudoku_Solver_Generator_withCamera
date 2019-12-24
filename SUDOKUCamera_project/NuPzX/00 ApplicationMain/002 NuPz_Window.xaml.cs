@@ -105,6 +105,7 @@ namespace GNPZ_sdk{
                 lblCurrentnDifficultyLevel.Visibility=Visibility.Hidden;
 
                 GNPX_AnalyzerMan.Send_Solved += MultiSolved;
+                NuPz_Win.Send_webCameraInfo += DigitsRecog_ReportPuzzle;
 
                 GNPXGNPX.Content = "GNPX "+DateTime.Now.Year;
 

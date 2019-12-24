@@ -948,7 +948,7 @@
                                     <Label Content="(In development)" FontFamily="MS Mincho" FontSize="14" Foreground="#FFE62626" Height="23" HorizontalAlignment="Left" Margin="215,116,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="137" />
                                 </Grid>
                     -->
-                                        <Button x:Name="btnSudokuDetection" FontFamily="MS Gothic" FontSize="14" Foreground="White" Click="btnRecog_Click" Content="Detect" Margin="361,36,12,184" BorderBrush="#FF0F1410" ToolTip="Detect sudoku problems" >
+                                        <Button x:Name="btnSudokuDetection" FontFamily="MS Gothic" FontSize="14" Foreground="White" Click="btnRecog_Click" Content="Detection" Margin="361,36,12,184" BorderBrush="#FF0F1410" ToolTip="Detect sudoku problems" >
                                             <Button.Background>
                                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                     <GradientStop Color="#FF0E260E" Offset="1" />

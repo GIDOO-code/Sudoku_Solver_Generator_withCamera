@@ -258,6 +258,17 @@ namespace GNPZ_sdk{
             SDKProbLst.ForEach(P=>P.ID=(ID++));
             CurrentPrbNo=(ID-1);
         }
+        
+        public UPuzzle SDK_Puzzle_SetIndexAndSave( int[] SDK81, string name="", int difLvl=0, bool saveF=false ){
+            if(SDK81==null) return null;
+            var UP = SDK_ToUPuzzle(SDK81,name,difLvl,saveF);
+            if(saveF){
+    //          SDK_Save(UP); 
+                int ID=0;
+                SDKProbLst.ForEach(P=>P.ID=(ID++));
+            }
+            return UP;
+        }    
         public UPuzzle SDK_ToUPuzzle( int[] SDK81, string name="", int difLvl=0, bool saveF=false ){
             if(SDK81==null) return null;
             string st="";
@@ -268,6 +279,7 @@ namespace GNPZ_sdk{
             var UP=SDK_ToUPuzzle( st, name, difLvl, saveF);
             return UP;
         }
+
         public UPuzzle SDK_ToUPuzzle( string st, string name="", int difLvl=0, bool saveF=false ){
             List<UCell> B=_stringToBDL(st);
             if(B==null)  return null;
