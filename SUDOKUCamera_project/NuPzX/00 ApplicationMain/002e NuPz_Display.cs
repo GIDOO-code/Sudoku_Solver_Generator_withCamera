@@ -175,6 +175,7 @@ namespace GNPZ_sdk{
             }
 */
             switch(GNP00.GSmode){
+                case "DigRecog":
                 case "DigRecogTry":
                 case "tabACreate": _Display_CreateProblem(); break;
 

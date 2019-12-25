@@ -27,7 +27,6 @@ namespace GNPZ_sdk{
         private bool            FlipModeX;
         private bool            FlipModeY;
 
-
         public  UPuzzle         pGP_DgtRecog=null;
 
         private WriteableBitmap w1 = new WriteableBitmap(640, 480, 96, 96, PixelFormats.Bgr32, null);   //PixelFormats.Gray8
@@ -134,9 +133,9 @@ namespace GNPZ_sdk{
 
      //============================= Thread #0 --> on anather Thread #2 =============================
         private void btnRecog_Click(object sender, RoutedEventArgs e){
-            if((string)btnSudokuDetection.Content=="Detection"){
+            if((string)btnSudokuDetect.Content=="Detect"){
                 SDK81 = null;
-                btnSudokuDetection.Content="Stop";
+                btnSudokuDetect.Content="Stop";
                 GNP00.GSmode = "DigRecog"; 
                 DigRegMode = "DigRecogTry";
                 pGP_DgtRecog = new UPuzzle();
@@ -154,7 +153,7 @@ namespace GNPZ_sdk{
                 AnalyzerLap.Start();
             }
             else{
-                btnSudokuDetection.Content="Detection";
+                btnSudokuDetect.Content="Detect";
               //tokSrc.Cancel();
                 try{ taskSDK.Wait(); }
                 catch(AggregateException){ DigRegMode="DigRecogCancel"; }
@@ -185,7 +184,7 @@ namespace GNPZ_sdk{
 
             if(ex.succeedB){
                 this.Dispatcher.Invoke((Action)(() => {
-                    btnSudokuDetection.Content="Detection";
+                    btnSudokuDetect.Content="Detect";
                     bool AutoSave=(bool)chbAutoSave.IsChecked;
                     UPuzzle GPML=GNP00.SDK_Puzzle_SetIndexAndSave(ex.SDK81,saveF:AutoSave);
                     if(AutoSave){
@@ -210,8 +209,15 @@ namespace GNPZ_sdk{
             btnProbPre.IsEnabled = (GPML.ID>=1);
             btnProbNxt.IsEnabled = (GPML.ID<GNP00.SDKProbLst.Count-1); 
             GNP00.CurrentPrbNo=999999999;
+            __DispMode="DeletePuzzle";
+            displayTimer.Start();
         }    
 
-
+        private void btnDeletePuzzle_Click(object sender, RoutedEventArgs e){
+            var PDel = GNP00.GetCurrentProble();
+            if(PDel!=null) GNP00.SDK_RemovePuzzle(PDel);
+            __DispMode="DeletePuzzle";
+            displayTimer.Start();
+        }
      }
 }

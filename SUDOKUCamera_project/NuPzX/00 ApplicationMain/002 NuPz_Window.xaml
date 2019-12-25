@@ -948,7 +948,7 @@
                                     <Label Content="(In development)" FontFamily="MS Mincho" FontSize="14" Foreground="#FFE62626" Height="23" HorizontalAlignment="Left" Margin="215,116,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="137" />
                                 </Grid>
                     -->
-                                        <Button x:Name="btnSudokuDetection" FontFamily="MS Gothic" FontSize="14" Foreground="White" Click="btnRecog_Click" Content="Detection" Margin="361,36,12,184" BorderBrush="#FF0F1410" ToolTip="Detect sudoku problems" >
+                                        <Button x:Name="btnSudokuDetect" FontFamily="MS Gothic" FontSize="14" Foreground="White" Click="btnRecog_Click" Content="Detect" Margin="361,36,12,184" BorderBrush="#FF0F1410" ToolTip="Detect Sudoku Puzzle  " >
                                             <Button.Background>
                                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                     <GradientStop Color="#FF0E260E" Offset="1" />
@@ -964,7 +964,7 @@
                                         <Label x:Name="lblPara_fName" Content="fName" HorizontalAlignment="Left" VerticalAlignment="Top"
                                            Background="{x:Null}" Foreground="White" Margin="40,341,0,0" FontSize="12" Grid.ColumnSpan="2"/>
                                         <Button x:Name="btnSavePuzzleDetect" Click="btnSavePuzzleDetect_Click"
-                                            Foreground="White" Height="32" HorizontalAlignment="Left" Margin="361,116,0,0" VerticalAlignment="Top" Width="94"  FontSize="12" Content="Save" IsHitTestVisible="False">
+                                            Foreground="White" Height="32" HorizontalAlignment="Left" Margin="361,116,0,0" VerticalAlignment="Top" Width="94"  FontSize="12" Content="Save" IsHitTestVisible="False" ToolTip="Manual save">
                                             <Button.Background>
                                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                     <GradientStop Color="#FFB0B0CA" Offset="0" />
@@ -976,6 +976,17 @@
                                         </Button>
                                         <CheckBox x:Name="chbAutoSave" BorderBrush="#FF5C62A0" Foreground="White" VerticalAlignment="Top" Margin="361,96,0,0" HorizontalAlignment="Left"
                                               FontFamily="MS Gothic" VerticalContentAlignment="Center" Content="Auto save"   FontSize="12" Checked="chbAutoSave_CheckedUnchecked" Unchecked="chbAutoSave_CheckedUnchecked" IsChecked="True" />
+                                        <Button x:Name="btnDeletePuzzle" Content="Delete" HorizontalAlignment="Left" Margin="362,162,0,0" VerticalAlignment="Top" Width="93" Height="32" Foreground="White" Click="btnDeletePuzzle_Click" ToolTip="Delete the current Puzzle">
+                                            <Button.Background>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="#FFB0B0CA" Offset="0" />
+                                                    <GradientStop Color="#FF632C57" Offset="0.5" />
+                                                    <GradientStop Color="#FF20162B" Offset="1" />
+
+                                                </LinearGradientBrush>
+                                            </Button.Background>
+                                        </Button>
+                                        
                                     </Grid>
                                 </GroupBox>
                             </Grid>

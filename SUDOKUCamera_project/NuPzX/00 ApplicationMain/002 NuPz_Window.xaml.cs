@@ -435,6 +435,7 @@ namespace GNPZ_sdk{
             LblForceChain_CellHouse.Foreground = (B) ? Brushes.LightBlue : Brushes.Yellow;
         }
 
+
         private void tabSolver_SelectionChanged( object sender, SelectionChangedEventArgs e ){
             TabItem tabItm = tabSolver.SelectedItem as TabItem;
             if( tabItm!=null ) SDK_Ctrl.MltAnsSearch = (tabItm.Name=="tabBMultiSolve");  

@@ -176,6 +176,29 @@ namespace GNPZ_sdk{
             CurrentPrbNo=PnoMemo;
         }
 
+        public UPuzzle SDK_RemovePuzzle( UPuzzle PDel){
+            if(PDel==null) return null;
+            SDKProbLst.Remove(PDel);
+
+            int PnoMemo=CurrentPrbNo;
+            if( PnoMemo==SDKProbLst.Count-1 ) PnoMemo--;
+
+            int id=0;
+            SDKProbLst.ForEach(P=>P.ID=(id++));
+            CurrentPrbNo=PnoMemo;
+
+            return PDel;
+        }
+        public UPuzzle SDK_RemovePuzzle( int ID){
+            UPuzzle PDel = SDKProbLst.Find(P=>P.ID==ID);
+            if(PDel==null) return null;
+            SDK_RemovePuzzle(PDel);
+
+
+
+            return PDel;
+        }
+
         public bool Contain( UPuzzle UP ){
             return (SDKProbLst.Find(P=>P.HTicks==UP.HTicks)!=null);
         }
