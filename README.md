@@ -1,4 +1,4 @@
-# In development.  Codes changes frequently!
+# This is a beta version. Probably the code will change!
 # Sudoku_Solver_Generator and Shoot with Camera
  Sudoku analysis and generation C# program. 
  The only algorithm used is non-backtracking.
