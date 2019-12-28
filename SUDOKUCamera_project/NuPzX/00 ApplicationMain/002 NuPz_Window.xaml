@@ -883,8 +883,8 @@
                                             VerticalAlignment="Top" Width="175" Height="20" SelectedIndex="1"
                                             FontFamily="MS Gothic" FontWeight="Bold" FontSize="12" Margin="17,19,0,0" IsEnabled="False"/>
 
-                                        <Label x:Name="cameraMessageBox" Content="...." HorizontalAlignment="Left" VerticalAlignment="Top"
-                                    Background="{x:Null}" Foreground="#FFF32020" Margin="282,36,0,-2"/>
+                                        <Label x:Name="cameraMessageBox" Content="...." HorizontalAlignment="Right" VerticalAlignment="Top"
+                                    Background="{x:Null}" Foreground="#FFF32020" Margin="0,36,10,0"/>
                                         <Border x:Name="bdbCameraAct" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="362,5,0,0" VerticalAlignment="Top" Width="93" BorderBrush="#FFAEF2FF" >
                                             <Button x:Name="btnCameraActivate" FontFamily="MS Gothic" FontSize="14" Foreground="White" Click="btnCameraActivate_Click" ToolTip="Click if camera is not activated" Content="Activate" Margin="0">
                                                 <Button.Background>

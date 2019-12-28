@@ -21,6 +21,7 @@ namespace GNPZ_sdk{
         static  public  string  DigRegMode; 
         static  public int[]    SDK81;
         static  public  Mat     Frame00;
+        private int             threadCC=0;
 
         private int             camID=-1;
         private string          stringCapType;
@@ -65,6 +66,10 @@ namespace GNPZ_sdk{
 
      //============================= Thread #0 --> on anather Thread #1 ============================= 
         private void _ThreadActivateSub(){ 
+            if(threadCC>1){
+                this.Dispatcher.Invoke((Action)(() => cameraMessageBox.Content=$"Camera thread is running. ({threadCC})" ));
+                return;
+            }
             camID = -1;
             Thread.Sleep(400);
             var selP=rdbVideoCameraLst.Find(p=>(bool)p.IsChecked);
@@ -79,8 +84,9 @@ namespace GNPZ_sdk{
             AnalyzerLap.Stop();
         }
         private void cameraCapture( object state ){
+            threadCC++;
             try{
-                if(camID<0)  return;
+                if(camID<0)  goto threadEnd;
                                 WriteLine($"camID:{camID}");
 
                 var sp = stringCapType.Split(' ');
@@ -90,14 +96,14 @@ namespace GNPZ_sdk{
                 WriteLine($"camID]{camID} size:({camW},{camH})");
 
                 var camera=new VideoCapture(camID){ FrameWidth=camW, FrameHeight=camH, /*Fps=60*/ };
-                if(camera==null)  return;
+                if(camera==null)  goto threadEnd;
 
                 AnalyzerLap.Reset();
                 if(SDKRecgMan==null) SDKRecgMan = new sdkFrameRecgV3Man(this,fName:fName);
                 
                 using(camera){
                     while(true){
-                        if(cameraCancel)  return;
+                        if(cameraCancel)  goto threadEnd;
 
                         this.Dispatcher.Invoke(() => {
                             FlipModeX = (bool)chbXaxis.IsChecked;
@@ -130,6 +136,8 @@ namespace GNPZ_sdk{
                 this.Dispatcher.Invoke((Action)(() => cameraMessageBox.Content="Recognition failed" ));
 
             }
+          threadEnd:
+            threadCC--;
         }
 
      //============================= Thread #0 --> on anather Thread #2 =============================
