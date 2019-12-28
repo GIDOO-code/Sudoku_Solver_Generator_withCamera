@@ -8,7 +8,7 @@
    Skyscraper, EmptyRectangle, XY-Wing, W-Wing, RemotePair, XChain, XYChain,
    SueDeCoq, (Multi)Coloring,
    ALS-Wing, ALS-XZ, ALS-Chain,
-   (ALS)DeathBlossom(Ext.), (Grouped)NiceLoop, ForceChain and<br>
+   (ALS)DeathBlossom(Ext.), (Grouped)NiceLoop, ForceChain and
    GeneralLogic.
 There are also functions for transposed transformation of Sudoku problems, standardization and ordering of Sudoku problems.
 The algorithm is explained on the HTML page:<br>
