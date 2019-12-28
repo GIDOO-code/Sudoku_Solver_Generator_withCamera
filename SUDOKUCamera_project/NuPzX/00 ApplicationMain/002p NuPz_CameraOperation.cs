@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using static System.Console;
 using System.Windows;
@@ -216,6 +217,10 @@ namespace GNPZ_sdk{
         private void btnDeletePuzzle_Click(object sender, RoutedEventArgs e){
             var PDel = GNP00.GetCurrentProble();
             if(PDel!=null) GNP00.SDK_RemovePuzzle(PDel);
+            if(GNP00.SDKProbLst==null || GNP00.SDKProbLst.Count<=0){ 
+                SDK81 = Enumerable.Repeat(0,81).ToArray();
+                DigitsRecog_ReportPuzzle( this, new SDKSolutionEventArgs(SDK81,succeedB:false) );
+            }
             __DispMode="DeletePuzzle";
             displayTimer.Start();
         }
