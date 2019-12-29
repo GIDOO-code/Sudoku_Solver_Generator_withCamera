@@ -1,5 +1,6 @@
 ## <span style="color: pink; ">This is a beta version. Probably the code will change!</span>
 # Sudoku_Solver_Generator and Shoot with Camera
+![GNPX](/images/GNPX_start.PNG)
  Sudoku analysis and generation C# program.
  The only algorithm used is non-backtracking.
  The algorithm used is
