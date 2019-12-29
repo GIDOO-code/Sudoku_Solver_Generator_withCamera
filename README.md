@@ -19,3 +19,11 @@ The algorithm is explained on the HTML page:<br>
 
 ## This version can shoot sudoku with web_camera
 Two files(_LMparameter.txt,_0123456789Arial.jpg) are required for execution. These are in the "SUDOKUCamera_App" folder.
+
+
+## Another Sample
+Recognition of distorted image.
+![GNPX](/images/Sudoku_Camera01.png)  
+
+Recognition of  uneven brightness image.
+![GNPX](/images/Sudoku_Camera02.png)
