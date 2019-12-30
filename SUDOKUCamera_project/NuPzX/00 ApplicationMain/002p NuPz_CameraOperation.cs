@@ -66,7 +66,7 @@ namespace GNPZ_sdk{
 
      //============================= Thread #0 --> on anather Thread #1 ============================= 
         private void _ThreadActivateSub(){ 
-            if(threadCC>1){
+            if(threadCC>0){
                 this.Dispatcher.Invoke((Action)(() => cameraMessageBox.Content=$"Camera thread is running. ({threadCC})" ));
                 return;
             }
