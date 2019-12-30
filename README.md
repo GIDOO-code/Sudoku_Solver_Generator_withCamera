@@ -20,7 +20,7 @@ The algorithm is explained on the HTML page:<br>
 ## This version can shoot sudoku with web_camera
 Two files(_LMparameter.txt,_0123456789Arial.jpg) are required for execution. These are in the "SUDOKUCamera_App" folder. 
 If the executable file is not in "SUDOKU Camera App", compile and generate from the project(
-because it is under development).
+because under development).
 
 
 ## Another Sample
