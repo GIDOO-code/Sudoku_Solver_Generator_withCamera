@@ -245,7 +245,7 @@
     <value>戻 す</value>
     <comment>Undo</comment>
   </data>
-  <data name="chbDisplayCandidate" xml:space="preserve">
+  <data name="chbShowCandidate" xml:space="preserve">
     <value>空き数字を表示</value>
     <comment>Disply Candidate</comment>
   </data>
