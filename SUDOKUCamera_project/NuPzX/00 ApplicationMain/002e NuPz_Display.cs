@@ -203,7 +203,7 @@ namespace GNPZ_sdk{
             txbNoOfTrialsCum.Text = SDK_Ctrl.TLoopCC.ToString();
             txbBasicPattern.Text  = GNP00.SDKCntrl.PatternCC.ToString();
             int n=gamGen05.Text.ToInt();
-            lblNoOfProblems1.Content = (n-_ProgressPer).ToString();
+            lblNoOfPuzzles1.Content = (n-_ProgressPer).ToString();
 
             UPuzzle pGP = GNP00.pGP;
             if(pGP!=null){

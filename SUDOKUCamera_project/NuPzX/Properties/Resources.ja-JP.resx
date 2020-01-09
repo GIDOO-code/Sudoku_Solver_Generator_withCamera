@@ -263,7 +263,7 @@
   </data>
   <data name="btnCreateProblemMlt" xml:space="preserve">
     <value>問題作成</value>
-    <comment>Create Problems</comment>
+    <comment>Create Puzzle</comment>
   </data>
   <data name="btnMultiSolve" xml:space="preserve">
     <value>複数解探索</value>
@@ -305,7 +305,7 @@
     <value>手  法</value>
     <comment>Method</comment>
   </data>
-  <data name="lblNoOfProblems" xml:space="preserve">
+  <data name="lblNoOfPuzzles" xml:space="preserve">
     <value>問題数:</value>
     <comment>No. of problems</comment>
   </data>
@@ -321,7 +321,7 @@
     <value>累積回数:</value>
     <comment>cum. Trials:</comment>
   </data>
-  <data name="lblProblemLevel" xml:space="preserve">
+  <data name="lblPuzzleLevel" xml:space="preserve">
     <value>問題レベル:</value>
     <comment>Problem Level</comment>
   </data>

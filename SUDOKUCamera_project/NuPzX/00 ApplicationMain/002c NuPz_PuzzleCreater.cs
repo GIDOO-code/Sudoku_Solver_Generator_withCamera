@@ -117,7 +117,7 @@ namespace GNPZ_sdk{
         }
 
         private void PB_GBoard_MouseEnter(object sender,MouseEventArgs e) {
-            if(!tabManual.IsSelected) return;
+            if(!tabManual.IsSelected && !WebCam.IsSelected) return;
                     //WriteLine($"Enter...{tabManual.IsSelected} ");
             PB_GBoard.MouseDown += new MouseButtonEventHandler(Create_PB_GBoard_MouseLeftButtonDown);
         }
