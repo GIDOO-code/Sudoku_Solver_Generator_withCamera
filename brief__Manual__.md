@@ -106,7 +106,7 @@ Indicates the number of applied algorithms is shown in the box bellow.
    - 'Minimum' is the minimum number of pattern cells.Automatically generate more cells than the minimum number of patterns.
    - 'cells' is the number of cells in the generated pattern.
    - 'Pattern' can be created and modified by clicking on cells. At this time, the symmetry specification works.
-   - Import the pattern from the puzzle displayed on the left grid.
+   - Or, import the pattern from the puzzle displayed on the left grid.
 - Generate puzzles by specifying the number and difficulty of puzzles.
   - Specify basic pattern changes and randomization.
   - Indicates the status information of the trial.
