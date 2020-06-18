@@ -1,6 +1,6 @@
 # new! brief Manual
 # Sudoku_Solver_Generator and Shoot with Camera
-![GNPX](/images/Sudoku_Camera00.png)
+![GNPX](/images/withCamera/Sudoku_Camera00.png)
 
  Sudoku analysis and generation C# program.
  The only algorithm used is non-backtracking.
@@ -25,7 +25,7 @@ because under development).
 
 ## Another Sample
 Recognition of distorted image.
-![GNPX](/images/Sudoku_Camera01.png)  
+![GNPX](/images/withCamera/Sudoku_Camera01.png)  
 
 Recognition of  uneven brightness image.
-![GNPX](/images/Sudoku_Camera02.png)
+![GNPX](/images/withCamera/Sudoku_Camera02.png)
